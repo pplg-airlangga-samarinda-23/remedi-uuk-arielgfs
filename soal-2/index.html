@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script>
+        function hitung_rata() {
+            var siswa1 = parseFloat(document.getElementById('siswa1').value);
+            var siswa2 = parseFloat(document.getElementById('siswa2').value);
+            var siswa3 = parseFloat(document.getElementById('siswa3').value);
+            var siswa4 = parseFloat(document.getElementById('siswa4').value);
+            var siswa5 = parseFloat(document.getElementById('siswa5').value);
+
+            var Rata = (siswa1 + siswa2 + siswa3 + siswa4 + siswa5)/5;
+
+            document.getElementById('hasil').innerText = Rata + "cm";
+        }
+        
+    </script>
+</head>
+<body>
+    <header>
+        <h1>CodeChallange 2024</h1>
+    </header>
+    <article>
+        <h1 style="text-align: center; font-size: 35px;">Rata-Rata Tinggi Badan</h1>
+        <div class="form">
+            <div class="label">
+                <label>Siswa 1</label>
+                <label>Siswa 2</label>
+                <label>Siswa 3</label>
+                <label>Siswa 4</label>
+                <label>Siswa 5</label>
+            </div>
+            <form onsubmit="event.preventDefault(); hitung_rata();">
+                <input type="number" id="siswa1" name="siswa1" style="position: relative; top: 4px;" required>
+                <input type="number" id="siswa2" name="siswa2" style="position: relative; top: 4px;" required>
+                <input type="number" id="siswa3" name="siswa3" style="position: relative; top: 15px;" required>
+                <input type="number" id="siswa4" name="siswa4" style="position: relative; top: 20px;" required>
+                <input type="number" id="siswa5" name="siswa5" style="position: relative; top: 25px;" required>
+                <button style="background-color: rgb(0, 157, 255); position: relative; top: 50px;">Hitung</button>
+            </form>
+        </div>
+
+        <div class="hasil">
+            <p>Hasil:</p>
+            <p style="position: relative; left: 10px;" id="hasil">21</p>
+        </div>
+        
+    </article>
+    <footer>
+        <h1>Copyright 2024</h1>
+        <div class="icon">
+            <a href="https://www.facebook.com/"><img width="40px" height="40px" src="facebook.png"></a>
+            <a href="https://www.instagram.com/"><img width="40px" height="40px" src="instagram.png"></a>
+            <a href="https://www.whatsapp.com/"><img width="40px" height="40px" src="whatsapp.png"></a>
+        </div>      
+    </footer>
+
+    
+</body>
+</html>
